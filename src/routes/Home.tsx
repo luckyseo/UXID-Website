@@ -83,7 +83,14 @@ const NavDropdownOption = styled(Link)`
 `;
 
 function Home() {
-  const [hover, setHover] = useState(false);
+  const [ishover, setIsHover] = useState(false);
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+
   return (
     <>
       <NavBarWrapper>
@@ -101,8 +108,17 @@ function Home() {
           noiseStrength={77}
         >
           <NavBarUl>
-            <Navli>
-              <NavLink to="/">Home</NavLink>
+            <Navli
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              {ishover ? (
+                <LiquidGlassButton>
+                  <NavLink to="/">Home</NavLink>
+                </LiquidGlassButton>
+              ) : (
+                <NavLink to="/">Home</NavLink>
+              )}
             </Navli>
             <Navli>ProjectUX</Navli>
             <Navli>News</Navli>

@@ -11,6 +11,7 @@ import { Link, Outlet } from "react-router-dom";
 // import Dropdown from "react-bootstrap/Dropdown";
 // import DropdownButton from "react-bootstrap/DropdownButton";
 // https://react-bootstrap.netlify.app/docs/components/dropdowns/
+import logo from "../assets/img/logo.png";
 
 const NavBar = styled(LiquidGlassContainer)`
   width: 70% !important;
@@ -22,7 +23,6 @@ const NavBar = styled(LiquidGlassContainer)`
   justify-self: center;
   border-radius: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   /* background: rgba(255, 255, 255, 0.21); /* transparent background */
   /* backdrop-filter: blur(5.5px); glass blur effect */
@@ -144,6 +144,7 @@ function Home() {
       // noiseFrequency={0.008}
       // noiseStrength={77}
       >
+        <img src={logo} alt="UXID-Logo" className="h-8 w-auto ml-auto"></img>
         <NavBarUl>
           <Navli>
             <NavLink to="/">Home</NavLink>

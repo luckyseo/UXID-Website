@@ -110,22 +110,36 @@ const NavLink = styled(Link)`
     background-color: rgba(249, 248, 248, 0.127);
   }
 `;
-const NavBarWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+const NavDropdownWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover ul {
+    display: flex; /* show dropdown on hover */
+  }
 `;
-const NavDropdownBox = styled.div`
-  border-radius: 20px;
-  width: 134px;
-  height: auto;
-  display: flex;
+const NavDropdownMenu = styled.ul`
+  display: none;
+  position: absolute;
+  top: 100%; /* place under the parent */
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 1);
+  min-width: 150px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+  z-index: 5;
 `;
 const NavDropdownOption = styled(Link)`
-  color: white;
+  padding: 8px 12px;
+  color: black;
+  text-decoration: none;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 `;
 
 function Home() {
@@ -150,7 +164,20 @@ function Home() {
             <NavLink to="/">Home</NavLink>
           </Navli>
           <Navli>
-            <NavLink to="/projectUX/student">ProjectUX</NavLink>
+            <NavDropdownWrapper>
+              <NavLink to="/">ProjectUX</NavLink>
+              <NavDropdownMenu>
+                <NavDropdownOption to="/projectUX/student">
+                  Student
+                </NavDropdownOption>
+                <NavDropdownOption to="/projectUX/client">
+                  client
+                </NavDropdownOption>
+                <NavDropdownOption to="/projectUX/mentor">
+                  mentor
+                </NavDropdownOption>
+              </NavDropdownMenu>
+            </NavDropdownWrapper>
           </Navli>
           <Navli>News</Navli>
           <Navli>About</Navli>

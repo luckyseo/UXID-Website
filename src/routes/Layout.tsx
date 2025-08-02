@@ -139,17 +139,6 @@ function Layout() {
   return (
     <>
       <NavBar
-      // width={950}
-      // height={50}
-      // borderRadius={50}
-      // innerShadowColor="#cfcfcf"
-      // innerShadowBlur={15}
-      // innerShadowSpread={-10}
-      // glassTintColor="rgba(255, 255, 255, 0)"
-      // glassTintOpacity={0}
-      // frostBlurRadius={0}
-      // noiseFrequency={0.008}
-      // noiseStrength={77}
       >
         <img src={logo} alt="UXID-Logo" className="h-8 w-auto ml-auto"></img>
         <NavBarUl>

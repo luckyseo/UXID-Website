@@ -4,6 +4,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./routes/Layout";
 import Home from "./pages/Home";
+import Client from "./pages/Client";
+import Mentor from "./pages/Mentor";
+import Student from "./pages/Student";
+
+import About from "./pages/About";
+import News from "./pages/News";
 
 function Router() {
   return (
@@ -11,6 +17,11 @@ function Router() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home></Home>} />
+          <Route path="/Client" element={<Client></Client>} />
+          <Route path="/Mentor" element={<Mentor></Mentor>} />
+          <Route path="/Student" element={<Student></Student> }/>
+          <Route path="/News" element={<News></News>} />
+          <Route path="/About" element={<About></About>} />
 
         </Route>
       </Routes>

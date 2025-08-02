@@ -17,9 +17,9 @@ function Router() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home></Home>} />
-          <Route path="/Client" element={<Client></Client>} />
-          <Route path="/Mentor" element={<Mentor></Mentor>} />
-          <Route path="/Student" element={<Student></Student> }/>
+          <Route path="/projectUX/Client" element={<Client></Client>} />
+          <Route path="/projectUX/Mentor" element={<Mentor></Mentor>} />
+          <Route path="/projectUX/Student" element={<Student></Student> }/>
           <Route path="/News" element={<News></News>} />
           <Route path="/About" element={<About></About>} />
 

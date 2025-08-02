@@ -92,6 +92,7 @@ const Navli = styled.li`
 const NavLink = styled(Link)`
   color: white;
   text-decoration: none;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,16 +154,20 @@ function Layout() {
                   Student
                 </NavDropdownOption>
                 <NavDropdownOption to="/projectUX/client">
-                  client
+                  Client
                 </NavDropdownOption>
                 <NavDropdownOption to="/projectUX/mentor">
-                  mentor
+                  Mentor
                 </NavDropdownOption>
               </NavDropdownMenu>
             </NavDropdownWrapper>
           </Navli>
-          <Navli>News</Navli>
-          <Navli>About</Navli>
+           <Navli>
+            <NavLink to="/News">News</NavLink>
+          </Navli>
+          <Navli>
+            <NavLink to="/About">About</NavLink>
+          </Navli>
         </NavBarUl>
       </NavBar>
 

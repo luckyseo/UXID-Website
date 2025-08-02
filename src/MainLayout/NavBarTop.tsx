@@ -6,13 +6,16 @@ import {
 } from "@tinymomentum/liquid-glass-react";
 import "@tinymomentum/liquid-glass-react/dist/components/LiquidGlassBase.css";
 import { useState } from "react";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 import { Link, Outlet } from "react-router-dom";
-// import Dropdown from "react-bootstrap/Dropdown";
-// import DropdownButton from "react-bootstrap/DropdownButton";
-// https://react-bootstrap.netlify.app/docs/components/dropdowns/
 
-const NavBar = styled(LiquidGlassContainer)`
+const NavBarTop = () => {
+  const [isHover, setIsHover] = useState(false)
+
+  const handleMouseEnter = () => setIsHover(true)
+  const handleMouseLeave = () => setIsHover(false)
+
+  const NavBar = styled(LiquidGlassContainer)`
   width: 70% !important;
   height: 35px !important;
   position: fixed !important;
@@ -82,54 +85,42 @@ const NavDropdownOption = styled(Link)`
   color: white;
 `;
 
-function Home() {
-  const [ishover, setIsHover] = useState(false);
-  const handleMouseLeave = () => {
-    setIsHover(false);
-  };
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
 
   return (
-    <>
-      <NavBarWrapper>
-        <NavBar
-          width={950}
-          height={50}
-          borderRadius={50}
-          innerShadowColor="#cfcfcf"
-          innerShadowBlur={15}
-          innerShadowSpread={-10}
-          glassTintColor="rgba(255, 255, 255, 0)"
-          glassTintOpacity={0}
-          frostBlurRadius={0}
-          noiseFrequency={0.008}
-          noiseStrength={77}
+    <NavBarWrapper>
+    <NavBar
+      width={950}
+      height={50}
+      borderRadius={50}
+      innerShadowColor="#cfcfcf"
+      innerShadowBlur={15}
+      innerShadowSpread={-10}
+      glassTintColor="rgba(255, 255, 255, 0)"
+      glassTintOpacity={0}
+      frostBlurRadius={0}
+      noiseFrequency={0.008}
+      noiseStrength={77}
+    >
+      <NavBarUl>
+        <Navli
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <NavBarUl>
-            <Navli
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              {ishover ? (
-                <LiquidGlassButton>
-                  <NavLink to="/">Home</NavLink>
-                </LiquidGlassButton>
-              ) : (
-                <NavLink to="/">Home</NavLink>
-              )}
-            </Navli>
-            <Navli>ProjectUX</Navli>
-            <Navli>News</Navli>
-            <Navli>About</Navli>
-          </NavBarUl>
-        </NavBar>
-        <Footer />
-      </NavBarWrapper>
-      <Outlet />
-    </>
-  );
+          {isHover ? (
+            <LiquidGlassButton>
+              <NavLink to="/">Home</NavLink>
+            </LiquidGlassButton>
+          ) : (
+            <NavLink to="/">Home</NavLink>
+          )}
+        </Navli>
+        <Navli>ProjectUX</Navli>
+        <Navli>News</Navli>
+        <Navli>About</Navli>
+      </NavBarUl>
+    </NavBar>
+    </NavBarWrapper>
+  )
 }
 
-export default Home;
+export default NavBarTop

@@ -24,16 +24,10 @@ const NavBar = styled(LiquidGlassContainer)`
   border-radius: 20px;
   display: flex;
   align-items: center;
-  /* background: rgba(255, 255, 255, 0.21); /* transparent background */
-  /* backdrop-filter: blur(5.5px); glass blur effect */
-  /* -webkit-backdrop-filter: blur(5.5px); Safari support */
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
 
-  /* box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2); */
-  /* https://www.liquid-glass.pro/doc/react.html */
 
   width: 950px;
-  height: 50px;
+  height: 100px;
   border-radius: 25px;
   position: relative;
   isolation: isolate;
@@ -81,10 +75,9 @@ const NavBar = styled(LiquidGlassContainer)`
 
 const NavBarUl = styled.ul`
   display: flex;
-  height: 100%;
   width: 80%;
   justify-content: space-around;
-  align-items: center;
+
   cursor: pointer;
 `;
 
@@ -142,7 +135,7 @@ const NavDropdownOption = styled(Link)`
   }
 `;
 
-function Home() {
+function Layout() {
   return (
     <>
       <NavBar
@@ -190,4 +183,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Layout;

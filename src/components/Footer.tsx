@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { ApplyBtn } from "./Common/Stylization";
 
 const Container = styled(LiquidGlassContainer)`
   width: 70% !important;
@@ -30,21 +31,7 @@ const Wrapper = styled.div`
     white-space: nowrap;
   }
 `;
-const ApplyBtn = styled(LiquidGlassButton)`
-  display: flex;
-  border-radius: 15px;
-  background-color: rgba(255, 255, 255, 0.3);
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: white;
 
-  &:active {
-    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.4),
-      inset -2px -2px 6px rgba(255, 255, 255, 0.3);
-    transform: translateY(1px); /* optional for a “pressed” feel */
-  }
-`;
 function Footer() {
   return (
     <Container
@@ -64,7 +51,8 @@ function Footer() {
         <span>What are you waiting for?</span>
         <ApplyBtn
           width={75}
-          height={23}
+          height="90%"
+          
           borderRadius={50}
           innerShadowColor="#f5f0f0"
           innerShadowBlur={0}

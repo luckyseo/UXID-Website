@@ -12,35 +12,18 @@ import { Link, Outlet } from "react-router-dom";
 // import DropdownButton from "react-bootstrap/DropdownButton";
 // https://react-bootstrap.netlify.app/docs/components/dropdowns/
 import logo from "../assets/img/logo.png";
+import { ApplyBtn } from "../components/Common/Stylization";
 
 const NavBar = styled(LiquidGlassContainer)`
   width: 70% !important;
   height: 35px !important;
   position: fixed !important;
-  top: 20px;
+  top: 10px;
   margin: 20px auto;
   z-index: 1;
-  justify-self: center;
-  border-radius: 20px;
   display: flex;
-  align-items: center;
-
-
-  width: 950px;
-  height: 100px;
-  border-radius: 25px;
-  position: relative;
-  isolation: isolate;
-  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  cursor: pointer;
+  padding: 0 10px;
+  justify-content: space-between;
 
   &:focus {
     outline: none;
@@ -49,7 +32,6 @@ const NavBar = styled(LiquidGlassContainer)`
   /* ::before styles */
   &::before {
     content: "";
-    position: absolute;
     inset: 0;
     z-index: 0;
     border-radius: 25px;
@@ -61,7 +43,6 @@ const NavBar = styled(LiquidGlassContainer)`
   /* ::after styles */
   &::after {
     content: "";
-    position: absolute;
     inset: 0;
     z-index: -1;
     border-radius: 25px;
@@ -75,19 +56,20 @@ const NavBar = styled(LiquidGlassContainer)`
 
 const NavBarUl = styled.ul`
   display: flex;
-  width: 80%;
-  justify-content: space-around;
+  width: 70%;
+  justify-content: center;
+  gap: 50px;
 
   cursor: pointer;
 `;
 
 const Navli = styled.li`
   color: white;
-  height: 80% !important;
+
+  height: 100 % !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px !important;
 `;
 const NavLink = styled(Link)`
   color: white;
@@ -96,7 +78,6 @@ const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
   height: 100%;
   border-radius: 15px;
   transition: background-color 0.3s ease;
@@ -109,7 +90,7 @@ const NavDropdownWrapper = styled.div`
   display: inline-block;
 
   &:hover ul {
-    display: flex; /* show dropdown on hover */
+    display: flex; /
   }
 `;
 const NavDropdownMenu = styled.ul`
@@ -139,9 +120,12 @@ const NavDropdownOption = styled(Link)`
 function Layout() {
   return (
     <>
-      <NavBar
-      >
-        <img src={logo} alt="UXID-Logo" className="h-8 w-auto ml-auto"></img>
+      <NavBar>
+        <img
+          src={logo}
+          alt="UXID-Logo"
+          style={{ height: 32, width: "auto", marginRight: 24 }}
+        />
         <NavBarUl>
           <Navli>
             <NavLink to="/">Home</NavLink>
@@ -154,21 +138,42 @@ function Layout() {
                   Student
                 </NavDropdownOption>
                 <NavDropdownOption to="/projectUX/client">
-                  Client
+                  client
                 </NavDropdownOption>
                 <NavDropdownOption to="/projectUX/mentor">
-                  Mentor
+                  mentor
                 </NavDropdownOption>
               </NavDropdownMenu>
             </NavDropdownWrapper>
           </Navli>
-           <Navli>
+          <Navli>
             <NavLink to="/News">News</NavLink>
           </Navli>
           <Navli>
             <NavLink to="/About">About</NavLink>
           </Navli>
+         
+        
         </NavBarUl>
+            <ApplyBtn
+              as={Link}
+              to="/Contact"
+
+                     width={100}
+                  height={50}
+                  borderRadius={50}
+                  innerShadowColor="#f5f0f0"
+                  innerShadowBlur={0}
+                  innerShadowSpread={-5}
+                  glassTintColor="rgba(249, 248, 248, 0.127)"
+                  glassTintOpacity={0}
+                  frostBlurRadius={6}
+                  noiseFrequency={0.008}
+                  noiseStrength={77}
+            >
+              Contact Us
+            </ApplyBtn>
+          
       </NavBar>
 
       <Outlet />

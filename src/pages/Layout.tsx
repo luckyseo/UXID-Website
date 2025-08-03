@@ -63,7 +63,7 @@ const NavBarUl = styled.ul`
 
 const Navli = styled.li`
   color: white;
-  height: 100;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -39,10 +39,10 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: url('/img/bg.png') repeat-y center top;
+  /* background: url('/img/bg.png') repeat-y center top; */
+  background-color: rgb(43, 39, 102);
    //for testing liquid effect
   background-size: cover;
-  height: 2000px;
   color: white;
 }
 
@@ -69,20 +69,15 @@ body{
   font-family: 'Nunito', sans-serif;
 
 }
+
+:root{
+  
+}
 `;
-const BlurredBackground = styled.div`
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  background-size: cover;
-  filter: blur(12px); /* ✅ Blurs the background */
-  transform: scale(1.05); /* ✅ avoids sharp edges showing at sides */
-  z-index: -2; /* ✅ stays at the very back */
-`;
+
 function App() {
   return (
     <>
-      {/* <BlurredBackground /> */}
       <GlobalStyle />
       <Router />
       {/* <RouterProvider router={Router} /> */}

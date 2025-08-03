@@ -18,14 +18,14 @@ function Router() {
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/projectUX/Client" element={<Client />} />
-          <Route path="/projectUX/Mentor" element={<Mentor />} />
-          <Route path="/projectUX/Student" element={<Student />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/news/events" element={<Events />} />
-          <Route path="/about/join" element={<Join />} />
-          <Route path="/about/sponsor" element={<Sponsor />} />
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/projectUX/Client" element={<Client />}></Route>
+          <Route path="/projectUX/Mentor" element={<Mentor />}></Route>
+          <Route path="/projectUX/Student" element={<Student />}></Route>
+          <Route path="/news" element={<News />}></Route>
+          <Route path="/news/events" element={<Events />}></Route>
+          <Route path="/about/join" element={<Join />}></Route>
+          <Route path="/about/sponsor" element={<Sponsor />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

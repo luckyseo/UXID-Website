@@ -7,7 +7,7 @@ export const EndGap = styled.div`
 
 export const SectionGap = styled.div`
   width: 100%;
-  min-height: 70px;
+  min-height: 120px;
 `;
 
 export const StartGap = styled.div`

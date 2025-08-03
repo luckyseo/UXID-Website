@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import HomeLogo from "../components/Home/HomeLogo";
 import Card from "../components/genericComponents/Card";
-import Description from "../components/genericComponents/Description";
+import { Description } from "../components/genericComponents/Description";
 import { Title } from "../components/genericComponents/Title";
 import {
   TitleContainer,
@@ -49,13 +49,13 @@ const Home = () => {
         </CardContainer>
       </SectionWrapper>
       <SectionGap />
+      <SectionGap />
       <SectionWrapper>
         <TitleContainer>
           <Title>CHOOSE WHO YOU ARE</Title>
           <Description>your goals and what you’re passionate about</Description>
         </TitleContainer>
       </SectionWrapper>
-
       <EndGap />
     </>
   );

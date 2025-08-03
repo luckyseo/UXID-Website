@@ -2,13 +2,16 @@ import {
   TitleContainer,
   SectionWrapper,
 } from "../components/Common/Stylization";
-import Description from "../components/genericComponents/Description";
-import { StartGap } from "../components/genericComponents/Gap";
+import { Description } from "../components/genericComponents/Description";
+import { StartGap, SectionGap } from "../components/genericComponents/Gap";
 import { Title } from "../components/genericComponents/Title";
+import { CardGrid } from "../components/Common/Stylization";
+import { CardG } from "../components/genericComponents/Card";
 function Sponsor() {
   return (
     <>
       <StartGap />
+
       <SectionWrapper>
         <TitleContainer style={{ width: "70%" }}>
           <Title style={{ marginBottom: "50px" }}>We're Looking for you</Title>

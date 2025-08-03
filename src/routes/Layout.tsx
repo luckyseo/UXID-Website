@@ -75,8 +75,9 @@ const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 90%;
   border-radius: 15px;
+  padding: 5px 15px;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: rgba(249, 248, 248, 0.127);

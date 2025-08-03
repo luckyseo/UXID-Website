@@ -1,16 +1,12 @@
 import styled from "styled-components";
-import {
-  LiquidGlassButton,
-  LiquidGlassContainer,
-  LiquidGlassLink,
-} from "@tinymomentum/liquid-glass-react";
+import { LiquidGlassContainer } from "@tinymomentum/liquid-glass-react";
 import "@tinymomentum/liquid-glass-react/dist/components/LiquidGlassBase.css";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import { Link, Outlet } from "react-router-dom";
 
 import logo from "../assets/img/logo.png";
-import { ApplyBtn } from "../components/Common/Stylization";
+import { ApplyBtn } from "../components/genericComponents/Buttons";
 
 const NavBar = styled(LiquidGlassContainer)`
   width: 70% !important;

@@ -29,6 +29,7 @@ const Icon = styled.div`
   transition: transform 0.3s ease;
 
   ${CardBox}:hover & {
+    //this is styled-components selector trick
     transform: translate(0%, -150%) scale(0.6);
   }
 `;

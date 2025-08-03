@@ -4,6 +4,7 @@ import HomeLogo from "../components/Home/HomeLogo";
 import Card from "../components/genericComponents/Card";
 import Description from "../components/genericComponents/Description";
 import Title from "../components/genericComponents/Title";
+import { TitleContainer } from "../components/Common/Stylization";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUp,
@@ -19,10 +20,7 @@ const CardContainer = styled.div`
   align-items: center;
   width: 100%;
 `;
-const TitleContainer = styled.div`
-  display: inline-block;
-  align-items: center;
-`;
+
 const SectionWrapper = styled.div`
   display: flex;
   gap: 50px;

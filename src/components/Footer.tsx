@@ -26,12 +26,14 @@ const Container = styled(LiquidGlassContainer)`
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   & span {
     white-space: nowrap;
   }
 `;
-
+const SocialLink = styled.a`
+  z-index: 10;
+`;
 function Footer() {
   return (
     <Container
@@ -50,9 +52,8 @@ function Footer() {
       <Wrapper>
         <span>What are you waiting for?</span>
         <ApplyBtn
-          width={75}
-          height="90%"
-          
+          width={100}
+          height={25}
           borderRadius={50}
           innerShadowColor="#f5f0f0"
           innerShadowBlur={0}
@@ -67,12 +68,21 @@ function Footer() {
         </ApplyBtn>
       </Wrapper>
       <Wrapper>
-        <a>
+        <SocialLink
+          //bc of the liquid-glass transparent layer (prob bc of pseudo-elements ::before/::after ), z-index was necessary
+          href="https://www.instagram.com/uts.uxid.society/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faInstagram} size={"2x"} />
-        </a>
-        <a>
+        </SocialLink>
+        <SocialLink
+          href="https://linkedin.com/company/uts-uxid-society"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faLinkedin} size={"2x"} />
-        </a>
+        </SocialLink>
       </Wrapper>
     </Container>
   );

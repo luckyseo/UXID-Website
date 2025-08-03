@@ -1,8 +1,6 @@
-import React from 'react'
-import styled from 'styled-components';
+import styled from "styled-components";
 import { LiquidGlassButton } from "@tinymomentum/liquid-glass-react";
 import "@tinymomentum/liquid-glass-react/dist/components/LiquidGlassBase.css";
-import { Link } from 'react-router-dom';
 
 export const ApplyBtn = styled(LiquidGlassButton)`
   display: flex;
@@ -13,9 +11,9 @@ export const ApplyBtn = styled(LiquidGlassButton)`
   font-size: 12px;
   color: white;
   border-radius: 50px !important; /* Force pill shape */
-  
+
   min-height: 80%;
-  padding: 5px 20px;
+  padding: 5px 15px;
   box-sizing: border-box;
 
   &:active {
@@ -24,5 +22,3 @@ export const ApplyBtn = styled(LiquidGlassButton)`
     transform: translateY(1px); /* optional for a “pressed” feel */
   }
 `;
-
-

@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { ApplyBtn } from "./Common/Stylization";
+import { ApplyBtn } from "../components/genericComponents/Buttons";
 
 const Container = styled(LiquidGlassContainer)`
   width: 70% !important;

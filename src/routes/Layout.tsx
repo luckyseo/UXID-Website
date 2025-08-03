@@ -8,9 +8,7 @@ import "@tinymomentum/liquid-glass-react/dist/components/LiquidGlassBase.css";
 import { useState } from "react";
 import Footer from "../components/Footer";
 import { Link, Outlet } from "react-router-dom";
-// import Dropdown from "react-bootstrap/Dropdown";
-// import DropdownButton from "react-bootstrap/DropdownButton";
-// https://react-bootstrap.netlify.app/docs/components/dropdowns/
+
 import logo from "../assets/img/logo.png";
 import { ApplyBtn } from "../components/Common/Stylization";
 
@@ -65,8 +63,7 @@ const NavBarUl = styled.ul`
 
 const Navli = styled.li`
   color: white;
-
-  height: 100 % !important;
+  height: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,34 +87,43 @@ const NavDropdownWrapper = styled.div`
   display: inline-block;
 
   &:hover ul {
-    display: flex; /
+    display: block;
   }
 `;
 const NavDropdownMenu = styled.ul`
   display: none;
   position: absolute;
-  top: 100%; /* place under the parent */
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  top: calc(100% + 10px); //this adjusts the gap btw navmenu & dropdown dox
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
   padding: 8px 0;
-  margin: 0;
+
   list-style: none;
   flex-direction: column;
-  min-width: 150px;
+  min-width: 100px;
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
   z-index: 5;
 `;
 const NavDropdownOption = styled(Link)`
   padding: 8px 12px;
   color: black;
-  text-decoration: none;
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
 `;
-
+const Gap = styled.div`
+  //this acts like a bridge btw navbar& dropdown dox.
+  //Bc there should be no empty gap btw dropdown box and Navli to make hover work
+  width: 100%;
+  height: 20px;
+  padding: 0px;
+  position: absolute;
+  top: 100%;
+  z-index: 5;
+`;
 function Layout() {
+  const [isHover, setIsHover] = useState(false);
   return (
     <>
       <NavBar>
@@ -131,17 +137,21 @@ function Layout() {
             <NavLink to="/">Home</NavLink>
           </Navli>
           <Navli>
-            <NavDropdownWrapper>
+            <NavDropdownWrapper
+              onMouseEnter={() => setIsHover(true)}
+              onMouseLeave={() => setIsHover(false)}
+            >
               <NavLink to="/">ProjectUX</NavLink>
-              <NavDropdownMenu>
+              <Gap />
+              <NavDropdownMenu style={{ display: isHover ? "flex" : "none" }}>
                 <NavDropdownOption to="/projectUX/student">
                   Student
                 </NavDropdownOption>
                 <NavDropdownOption to="/projectUX/client">
-                  client
+                  Client
                 </NavDropdownOption>
                 <NavDropdownOption to="/projectUX/mentor">
-                  mentor
+                  Mentor
                 </NavDropdownOption>
               </NavDropdownMenu>
             </NavDropdownWrapper>
@@ -152,28 +162,24 @@ function Layout() {
           <Navli>
             <NavLink to="/About">About</NavLink>
           </Navli>
-         
-        
         </NavBarUl>
-            <ApplyBtn
-              as={Link}
-              to="/Contact"
-
-                     width={100}
-                  height={50}
-                  borderRadius={50}
-                  innerShadowColor="#f5f0f0"
-                  innerShadowBlur={0}
-                  innerShadowSpread={-5}
-                  glassTintColor="rgba(249, 248, 248, 0.127)"
-                  glassTintOpacity={0}
-                  frostBlurRadius={6}
-                  noiseFrequency={0.008}
-                  noiseStrength={77}
-            >
-              Contact Us
-            </ApplyBtn>
-          
+        <ApplyBtn
+          as={Link}
+          to="/Contact"
+          width={100}
+          height={50}
+          borderRadius={50}
+          innerShadowColor="#f5f0f0"
+          innerShadowBlur={0}
+          innerShadowSpread={-5}
+          glassTintColor="rgba(249, 248, 248, 0.127)"
+          glassTintOpacity={0}
+          frostBlurRadius={6}
+          noiseFrequency={0.008}
+          noiseStrength={77}
+        >
+          Contact Us
+        </ApplyBtn>
       </NavBar>
 
       <Outlet />

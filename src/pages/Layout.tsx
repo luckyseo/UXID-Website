@@ -106,6 +106,9 @@ const NavDropdownOption = styled(Link)`
   color: white;
 
   &:hover {
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin: 0px 10px;
     background-color: rgba(249, 248, 248, 0.2);
   }
 `;

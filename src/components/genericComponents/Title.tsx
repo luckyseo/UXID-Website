@@ -14,6 +14,7 @@ export const ThinTitle = styled.h2`
   margin-bottom: 10px;
   text-align: center;
   margin-bottom: 20px;
+  line-height: 1.2;
 `;
 
 export const PositionTitle = styled(ThinTitle)``;

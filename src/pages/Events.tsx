@@ -1,4 +1,5 @@
+import Title from "../components/genericComponents/Title";
 function Events() {
-  return <h1>Events</h1>;
+  return <Title style={{ marginTop: "250px" }}>Coming Soon</Title>;
 }
 export default Events;

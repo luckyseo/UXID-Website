@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const ArrowWrapper = styled.div`
   width: 60px;
@@ -24,5 +27,16 @@ const ArrowWrapper = styled.div`
     transform: translateY(6px); /* more press effect when clicked */
   }
 `;
-
-export default ArrowWrapper;
+function DownArrow() {
+  return (
+    <ArrowWrapper>
+      {" "}
+      <FontAwesomeIcon
+        icon={faArrowDown}
+        size={"2x"}
+        style={{ margin: "30px" }}
+      />
+    </ArrowWrapper>
+  );
+}
+export default DownArrow;

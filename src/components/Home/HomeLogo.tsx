@@ -1,9 +1,7 @@
 import styled, { keyframes } from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
 // 🌈 Optional animated gradient for hover
-import ArrowWrapper from "../genericComponents/DownArrow";
+import DownArrow from "../genericComponents/DownArrow";
 import { useState } from "react";
 
 const LogoBox = styled.section`
@@ -72,13 +70,7 @@ export default function Home() {
         established by the UTS UXID Society
       </Subtitle>
 
-      <ArrowWrapper>
-        <FontAwesomeIcon
-          icon={faArrowDown}
-          size={"2x"}
-          style={{ margin: "30px" }}
-        />
-      </ArrowWrapper>
+      <DownArrow />
     </LogoBox>
   );
 }

@@ -1,18 +1,19 @@
 import styled from "styled-components";
-import HomeBanner from "../components/Home/HomeBanner";
 import HomeLogo from "../components/Home/HomeLogo";
 import Card from "../components/genericComponents/Card";
 import Description from "../components/genericComponents/Description";
-import Title from "../components/genericComponents/Title";
-import { TitleContainer } from "../components/Common/Stylization";
+import { Title } from "../components/genericComponents/Title";
+import {
+  TitleContainer,
+  SectionWrapper,
+} from "../components/Common/Stylization";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUp,
   faBrain,
   faBriefcase,
-  faClock,
-  faHeadSideMask,
 } from "@fortawesome/free-solid-svg-icons";
+import { EndGap, SectionGap } from "../components/genericComponents/Gap";
 
 const CardContainer = styled.div`
   display: flex;
@@ -21,13 +22,6 @@ const CardContainer = styled.div`
   width: 100%;
 `;
 
-const SectionWrapper = styled.div`
-  display: flex;
-  gap: 50px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 const Home = () => {
   return (
     <>
@@ -54,8 +48,15 @@ const Home = () => {
           />
         </CardContainer>
       </SectionWrapper>
+      <SectionGap />
+      <SectionWrapper>
+        <TitleContainer>
+          <Title>CHOOSE WHO YOU ARE</Title>
+          <Description>your goals and what you’re passionate about</Description>
+        </TitleContainer>
+      </SectionWrapper>
 
-      <HomeBanner></HomeBanner>
+      <EndGap />
     </>
   );
 };

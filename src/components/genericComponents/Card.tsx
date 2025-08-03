@@ -49,14 +49,14 @@ const Text = styled.p`
   }
 `;
 interface ICard {
-  icon: React.ReactNode; //you can insert Fontawesome component!
-  text: string;
+  icon?: React.ReactNode; //you can insert Fontawesome component!
+  text?: string;
 }
 function Card({ icon, text }: ICard) {
   return (
     <CardBox>
-      <Icon>{icon}</Icon>
-      <Text>{text}</Text>
+      {icon && <Icon>{icon}</Icon>}
+      {text && <Text>{text}</Text>}
     </CardBox>
   );
 }

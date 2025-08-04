@@ -9,7 +9,29 @@ const GlobalStyle = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
-
+:root{
+ --white:rgb(255, 255, 255);
+ --yellow:rgb(252, 208, 10);
+ --green:rgb(76, 186, 100);
+ --pink:rgb(242, 119, 174);
+ --orange:rgb(247, 152, 27);
+ --black:rgb(31, 35, 41);
+ --darkpurple: rgb(38, 34, 97);
+ --ivory:rgb(250, 243, 177);
+ --text-color:var(--white); //default text color
+ --borderRadius: 20px; //for card & rectangle box
+ --bg-color: var(--darkpurple); //default background color
+ --font-weight-bold: 700;
+ --font-weight-slim:400;
+--font-size-xs:13px; //footer fontsize
+--font-size-s: 1rem; //cardG (benefit section) fontsize
+--font-size-m:1.2rem; //description fontsize
+--font-size-l:20px; //Apply Now(student page btn) size
+--font-size-xl:2.5rem;//title fontsiz
+--font-size-2x: 8rem; //ProjectUX banner logo size
+--line-height-description: 1.15;
+--line-height-title: 1.2;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,9 +92,6 @@ body{
 
 }
 
-:root{
-  
-}
 `;
 
 function App() {

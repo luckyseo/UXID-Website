@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/img/logo.png';
+import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const BigCardInfo = () => {
   return (
@@ -23,7 +24,6 @@ const BigCardInfo = () => {
         overflow: 'hidden',
       }}
     >
-      {/* Top row: logo and email */}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
         <img src={logo} alt="logo" style={{ width: 48, height: 48, borderRadius: 12, objectFit: 'cover' }} />
         <div style={{
@@ -36,8 +36,6 @@ const BigCardInfo = () => {
           letterSpacing: 0.5,
         }}>uxidsociety@gmail.com</div>
       </div>
-
-      {/* Center text */}
       <div style={{
         flex: 1,
         width: '100%',
@@ -57,15 +55,15 @@ const BigCardInfo = () => {
         </span>
       </div>
 
-      {/* Bottom row: social icons */}
       <div style={{ width: '100%', display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: 12, marginTop: 12 }}>
-        {/* LinkedIn icon */}
+
         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" fill="#fff"/><path d="M8 11v5" stroke="#232323"/><path d="M8 8v.01" stroke="#232323"/><path d="M12 16v-5" stroke="#232323"/><path d="M16 16v-3a2 2 0 0 0-4 0" stroke="#232323"/></svg>
+           <FaLinkedin size={28} style={{  color: '#fff'}} />
+          
         </a>
-        {/* Instagram icon */}
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" fill="#fff"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="#232323"/><circle cx="17.5" cy="6.5" r="1" stroke="#232323"/></svg>
+          <FaInstagram size={28} style={{  color: '#fff' }} />
+          
         </a>
       </div>
     </div>

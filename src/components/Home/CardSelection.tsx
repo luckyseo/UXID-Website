@@ -1,26 +1,14 @@
-import { rgba } from "framer-motion";
 import React, { useState } from "react";
+import gradCap from "../../assets/img/GraduationCap.png";
+import profileImg from "../../assets/img/Profile.png";
+import teacherImg from "../../assets/img/Teacher.png";
 
 const buttonsInfo = [
 	{
-		icon: (
-			<svg
-				width="32"
-				height="32"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			>
-				<rect x="2" y="7" width="20" height="13" rx="2" />
-				<path d="M16 3v4" />
-				<path d="M8 3v4" />
-				<path d="M9 13h6" />
-				<path d="M12 10v6" />
-			</svg>
-		),
+	icon: (
+		<img src={teacherImg} alt="Faculty" style={{ width: 32, height: 32, objectFit: "contain", display: "block" }} />
+	
+	),
 		info: {
 			title: "Faculty",
 			desc: "You are a faculty member interested in supporting students and projects in interaction design.",
@@ -28,20 +16,8 @@ const buttonsInfo = [
 	},
 	{
 		icon: (
-			<svg
-				width="32"
-				height="32"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			>
-				<path d="M22 19v-2a4 4 0 0 0-3-3.87" />
-				<path d="M2 19v-2a4 4 0 0 1 3-3.87" />
-				<circle cx="12" cy="7" r="4" />
-			</svg>
+			<img src={gradCap} alt="Student" style={{ width: 32, height: 32, objectFit: "contain", display: "block" }} />
+	
 		),
 		info: {
 			title: "Student",
@@ -50,20 +26,8 @@ const buttonsInfo = [
 	},
 	{
 		icon: (
-			<svg
-				width="32"
-				height="32"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="white"
-				strokeWidth="2"
-				strokeLinecap="round"
-				strokeLinejoin="round"
-			>
-				<rect x="9" y="9" width="13" height="13" rx="2" />
-				<path d="M5 15v-2a4 4 0 0 1 4-4h2" />
-				<circle cx="6" cy="6" r="3" />
-			</svg>
+				<img src={profileImg} alt="Profile" style={{ width: 32, height: 32, objectFit: "contain", display: "block" }} />
+	
 		),
 		info: {
 			title: "Client",
@@ -101,7 +65,6 @@ const CardSelection: React.FC = () => {
 								position: "relative",
 							}}
 						>
-							{/* Icon on left */}
 							<div
 								style={{
 									background: "rgba(255,255,255,0.10)",

@@ -14,6 +14,7 @@ import {
   faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 import { EndGap, SectionGap } from "../components/genericComponents/Gap";
+import CardSelection from "../components/Home/CardSelection";
 
 const CardContainer = styled.div`
   display: flex;
@@ -56,6 +57,11 @@ const Home = () => {
           <Description>your goals and what you’re passionate about</Description>
         </TitleContainer>
       </SectionWrapper>
+      <SectionWrapper>
+
+        <CardSelection></CardSelection>
+      </SectionWrapper>
+      
       <EndGap />
     </>
   );

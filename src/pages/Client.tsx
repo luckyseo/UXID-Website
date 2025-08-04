@@ -16,6 +16,7 @@ import {
 import { SectionGap } from "../components/genericComponents/Gap";
 import { CardGrid } from "../components/Common/Stylization";
 import { CardG } from "../components/genericComponents/Card";
+import Question from "../components/Question";
 function Client() {
   return (
     <>
@@ -81,7 +82,13 @@ function Client() {
           </CardG>
         </CardGrid>
       </SectionWrapper>
+          <SectionWrapper style={{ gap: "5px" }}>
+       <Question></Question>
+        </SectionWrapper>
+        
+        <SectionGap />
       <EndGap />
+      
     </>
   );
 }

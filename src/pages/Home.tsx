@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { EndGap, SectionGap } from "../components/genericComponents/Gap";
 import CardSelection from "../components/Home/CardSelection";
+import BigCardInfo from "../components/Home/BigCardInfo";
 
 const CardContainer = styled.div`
   display: flex;
@@ -61,7 +62,11 @@ const Home = () => {
 
         <CardSelection></CardSelection>
       </SectionWrapper>
-      
+      <SectionGap />
+       <SectionWrapper>
+
+        <BigCardInfo />
+      </SectionWrapper>
       <EndGap />
     </>
   );

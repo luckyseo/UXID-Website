@@ -19,6 +19,7 @@ import {
   Description,
   CardDescription,
 } from "../components/genericComponents/Description";
+import Question from "../components/Question";
 function Mentor() {
   return (
     <>
@@ -85,6 +86,11 @@ function Mentor() {
           </CardG>
         </CardGrid>
       </SectionWrapper>
+          <SectionWrapper style={{ gap: "5px" }}>
+       <Question></Question>
+        </SectionWrapper>
+        
+        <SectionGap />
       <EndGap />
     </>
   );

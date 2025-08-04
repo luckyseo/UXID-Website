@@ -14,6 +14,7 @@ import { MApplyBtn } from "../components/genericComponents/Buttons";
 import { Description } from "../components/genericComponents/Description";
 import { CardG } from "../components/genericComponents/Card";
 import { CardDescription } from "../components/genericComponents/Description";
+import Question from "../components/Question";
 function Student() {
   return (
     <>
@@ -94,6 +95,12 @@ function Student() {
         </CardGrid>
       </SectionWrapper>
       <SectionGap />
+        <SectionWrapper style={{ gap: "5px" }}>
+       <Question></Question>
+        </SectionWrapper>
+        
+        <SectionGap />
+     
     </>
   );
 }

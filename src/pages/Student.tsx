@@ -15,7 +15,18 @@ import { Description } from "../components/genericComponents/Description";
 import { CardG } from "../components/genericComponents/Card";
 import { CardDescription } from "../components/genericComponents/Description";
 import Question from "../components/Question";
+import Tree from "../components/Tree";
 function Student() {
+  
+  const myEvents = [
+  { date: '19 August 2025', title: 'Induction Day', tick: true },
+  { date: '2 September 2025', title: 'First Workshop', tick: false },
+  { date: '16 September 2025', title: 'Second Workshop', tick: false },
+  { date: '30 September 2025', title: 'Third Workshop', tick: false },
+  { date: '7 October 2025', title: 'Pitch Practice Day', tick: true },
+  { date: '14 October 2025', title: 'Competition Day', tick: true },
+];
+
   return (
     <>
       <StartGap />
@@ -95,12 +106,26 @@ function Student() {
         </CardGrid>
       </SectionWrapper>
       <SectionGap />
-        <SectionWrapper style={{ gap: "5px" }}>
-       <Question></Question>
-        </SectionWrapper>
+      <SectionWrapper style={{ gap: "5px" }}>
+        <TitleContainer>
+          <Title style={{ marginBottom: "25px" }}>PROGRAM TIMELINE (SPRING SEMESTER 2025)</Title>
+          <Description>The program will be 8 weeks and commitment varies on team agreement</Description>
+        </TitleContainer>
         
-        <SectionGap />
-     
+      </SectionWrapper>
+      <Tree />
+      <SectionGap />
+      <SectionGap />
+      <SectionGap />
+      <SectionGap />
+      <SectionGap />
+       <SectionWrapper style={{ gap: "5px" }}>
+        
+        <Question></Question>
+      </SectionWrapper>
+      
+      <SectionGap />
+
     </>
   );
 }

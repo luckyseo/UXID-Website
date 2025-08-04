@@ -73,7 +73,7 @@ const buttonsInfo = [
 ];
 
 const CardSelection: React.FC = () => {
-	const [selected, setSelected] = useState<number | null>(null);
+	const [selected, setSelected] = useState<number | null>(1);
 
 	return (
 		<div

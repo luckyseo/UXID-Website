@@ -17,7 +17,16 @@ import { SectionGap } from "../components/genericComponents/Gap";
 import { CardGrid } from "../components/Common/Stylization";
 import { CardG } from "../components/genericComponents/Card";
 import Question from "../components/Question";
+import Tree from "../components/Tree";
 function Client() {
+    const myEvents = [
+  { date: '19 August 2025', title: 'Induction Day', tick: false },
+  { date: '2 September 2025', title: 'First Workshop', tick: false },
+  { date: '16 September 2025', title: 'Second Workshop', tick: false },
+  { date: '30 September 2025', title: 'Third Workshop', tick: false },
+  { date: '7 October 2025', title: 'Pitch Practice Day', tick: false },
+  { date: '14 October 2025', title: 'Competition Day', tick: true },
+];
   return (
     <>
       <StartGap />
@@ -47,7 +56,6 @@ function Client() {
           </Description>
         </TitleContainer>
       </SectionWrapper>
-      <SectionGap />
       <SectionGap />
       <SectionWrapper style={{ gap: "5px" }}>
         <TitleContainer>
@@ -81,12 +89,25 @@ function Client() {
             </CardDescription>
           </CardG>
         </CardGrid>
+      <SectionGap />
       </SectionWrapper>
-          <SectionWrapper style={{ gap: "5px" }}>
-       <Question></Question>
-        </SectionWrapper>
+           <SectionWrapper style={{ gap: "5px" }}>
+        <TitleContainer>
+          <Title style={{ marginBottom: "25px" }}>PROGRAM TIMELINE (SPRING SEMESTER 2025)</Title>
+          <Description>The program will be 8 weeks. The client must send a representative on the day of the competition, highly recommended but optional to attend induction day, but all other events are optional.</Description>
+        </TitleContainer>
         
-        <SectionGap />
+      </SectionWrapper>
+      <Tree />
+      <SectionGap />
+      <SectionGap />
+      <SectionGap />
+      <SectionGap />
+      <SectionGap />
+       <SectionWrapper style={{ gap: "5px" }}>
+        
+        <Question></Question>
+      </SectionWrapper>
       <EndGap />
       
     </>

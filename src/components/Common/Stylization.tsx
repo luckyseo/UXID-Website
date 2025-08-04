@@ -32,9 +32,12 @@ export const SectionWrapper = styled.div`
   //This Wraps Title Container & Cards
   display: flex;
   gap: 50px;
+  width: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 `;
 export const TitleContainer = styled.div`
   //This is mainly for wrapping Title & Description component

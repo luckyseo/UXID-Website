@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const LargeCard = styled.div`
   background: rgba(255, 255, 255, 0.08);
   width: 80%;
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;

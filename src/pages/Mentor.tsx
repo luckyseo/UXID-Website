@@ -3,7 +3,10 @@ import {
   SectionGap,
   EndGap,
 } from "../components/genericComponents/Gap";
-import { ThinTitle } from "../components/genericComponents/Title";
+import {
+  ThinTitle,
+  AccentPosition,
+} from "../components/genericComponents/Title";
 import {
   SectionWrapper,
   TitleContainer,
@@ -23,7 +26,8 @@ function Mentor() {
       <SectionGap />
       <SectionWrapper style={{ textAlign: "center", width: "80%;" }}>
         <ThinTitle>
-          Welcome Mentor to the <br />
+          Welcome <AccentPosition color="var(--green)">Mentor</AccentPosition>{" "}
+          to the <br />
           ProjectUX program
         </ThinTitle>
 

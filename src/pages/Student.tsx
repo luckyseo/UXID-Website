@@ -1,5 +1,9 @@
 import { SectionGap, StartGap } from "../components/genericComponents/Gap";
-import { ThinTitle, Title } from "../components/genericComponents/Title";
+import {
+  ThinTitle,
+  Title,
+  AccentPosition,
+} from "../components/genericComponents/Title";
 import {
   SectionWrapper,
   TitleContainer,
@@ -8,7 +12,7 @@ import {
 import DownArrow from "../components/genericComponents/DownArrow";
 import { MApplyBtn } from "../components/genericComponents/Buttons";
 import { Description } from "../components/genericComponents/Description";
-import Card, { CardG } from "../components/genericComponents/Card";
+import { CardG } from "../components/genericComponents/Card";
 import { CardDescription } from "../components/genericComponents/Description";
 function Student() {
   return (
@@ -16,7 +20,8 @@ function Student() {
       <StartGap />
       <SectionWrapper style={{ textAlign: "center", width: "80%;" }}>
         <ThinTitle>
-          Welcome STUDENT to the <br />
+          Welcome <AccentPosition color="var(--pink)">STUDENT</AccentPosition>{" "}
+          to the <br />
           ProjectUX program
         </ThinTitle>
         <MApplyBtn

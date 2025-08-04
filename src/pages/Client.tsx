@@ -4,7 +4,11 @@ import {
   TitleContainer,
 } from "../components/Common/Stylization";
 import DownArrow from "../components/genericComponents/DownArrow";
-import { Title, ThinTitle } from "../components/genericComponents/Title";
+import {
+  Title,
+  ThinTitle,
+  AccentPosition,
+} from "../components/genericComponents/Title";
 import {
   Description,
   CardDescription,
@@ -19,7 +23,8 @@ function Client() {
       <SectionGap />
       <SectionWrapper style={{ textAlign: "center", width: "80%;" }}>
         <ThinTitle>
-          Welcome CLIENT to the <br />
+          Welcome <AccentPosition color="var(--orange)">CLIENT </AccentPosition>
+          to the <br />
           ProjectUX program
         </ThinTitle>
 

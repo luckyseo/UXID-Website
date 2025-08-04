@@ -17,4 +17,7 @@ export const ThinTitle = styled.h2`
   line-height: 1.2;
 `;
 
-export const PositionTitle = styled(ThinTitle)``;
+export const AccentPosition = styled(ThinTitle)`
+  color: ${(props) => props.color || "var(--white)"};
+  display: inline;
+`;

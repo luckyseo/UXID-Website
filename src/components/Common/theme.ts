@@ -13,10 +13,8 @@ export type ThemeType = typeof defaultTheme;
 //     }
 // }
 //fontsize xs sm m lg xl
-//bold bolder
 //color: txt color:white, accent,
-//soc color green pink orange yellow darkpurple
-//borderradius
+
 //card background blur setting
 //
 //

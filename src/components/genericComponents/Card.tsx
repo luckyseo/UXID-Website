@@ -1,5 +1,20 @@
 import styled from "styled-components";
 
+export const LargeCard = styled.div`
+  background: rgba(255, 255, 255, 0.08);
+  width: 80%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: white;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2),
+    -1px -1px 1px rgba(255, 255, 255, 0.2);
+`;
+
 export const CardG = styled.div`
   background: rgba(255, 255, 255, 0.08);
   border-radius: 12px;

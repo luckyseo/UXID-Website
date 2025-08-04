@@ -59,12 +59,10 @@ const Home = () => {
         </TitleContainer>
       </SectionWrapper>
       <SectionWrapper>
-
         <CardSelection></CardSelection>
       </SectionWrapper>
       <SectionGap />
-       <SectionWrapper>
-
+      <SectionWrapper>
         <BigCardInfo />
       </SectionWrapper>
       <EndGap />

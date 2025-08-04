@@ -1,4 +1,8 @@
-import { EndGap, StartGap } from "../components/genericComponents/Gap";
+import {
+  EndGap,
+  StartGap,
+  SectionGap,
+} from "../components/genericComponents/Gap";
 import {
   SectionWrapper,
   TitleContainer,
@@ -9,44 +13,77 @@ import {
   Description,
   CardDescription,
 } from "../components/genericComponents/Description";
-import { SectionGap } from "../components/genericComponents/Gap";
 import { CardGrid } from "../components/Common/Stylization";
-import { CardG } from "../components/genericComponents/Card";
+import {
+  CardG,
+  CardBox,
+  LargeCard,
+} from "../components/genericComponents/Card";
+import styled from "styled-components";
 
 function Join() {
   return (
     <>
       {" "}
+      <StartGap />
+      <SectionWrapper>
+        <DownArrow />
+      </SectionWrapper>
       <SectionGap />
+      {/* Our Origin Section */}
+      <SectionWrapper style={{ gap: "10px" }}>
+        <TitleContainer>
+          <Title>OUR ORIGINS</Title>
+          <Description>
+            It all started when our amazing founder Amelinda Jessica Mang had a
+            vision
+          </Description>
+        </TitleContainer>
+        <LargeCard>
+          <CardDescription>
+            She wanted to explore avenues of design. Specifically in tech.
+            <br />
+            <br />
+            During this search she and many other students noticed the lack of
+            opportunities for University students to explore the avenues of user
+            experience & Interaction design at UTS. <br />
+            <br />
+            So began the journey of UXID. Bringing the opportunities for
+            students and likeminded people to explore & connect. 
+          </CardDescription>
+        </LargeCard>
+      </SectionWrapper>
+      <SectionGap />
+      <SectionGap />
+      {/* what can you get section */}
       <SectionWrapper style={{ gap: "5px" }}>
         <TitleContainer style={{ marginBottom: "10px" }}>
-          <Title>BENEFIT</Title>
-          <Description>How can ProjectUX help you?</Description>
+          <Title>WHAT YOU CAN GET</Title>
+          <Description>Benefits from joining our awesome society</Description>
         </TitleContainer>
         <CardGrid>
           <CardG>
             <CardDescription>
-              By providing you with a full project that can enhance your resume
-              and portfolio
+              Join awesome social events where you can relax, have fun, and make
+              new friends
             </CardDescription>
           </CardG>
           <CardG>
             <CardDescription>
-              By giving you soft and technical skills through our workshops, as
-              well as advice from industry professionals
+              Be able to join the amazing ProjectUX program and enhance your
+              portfolio
             </CardDescription>
           </CardG>
           <CardG>
             <CardDescription>
-              By giving you opportunities to network with like-minded people as
-              well as industry professionals, expanding your knowledge on where
-              your degree can take you
+              Make connections with industry speakers and improve your
+              networking skills
             </CardDescription>
           </CardG>
           <CardG>
             <CardDescription>
-              By giving you an experience to prepare you for your transition
-              from Uni to the real world
+              Join our industry events and learn more about the world of
+              interaction design
             </CardDescription>
           </CardG>
         </CardGrid>

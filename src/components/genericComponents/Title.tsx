@@ -18,6 +18,11 @@ export const ThinTitle = styled.h2`
 `;
 
 export const AccentPosition = styled(ThinTitle)`
+  //you can inherit style like this
   color: ${(props) => props.color || "var(--white)"};
   display: inline;
 `;
+{
+  /* You can use it like below
+  <AccentPosition color="var(--green)">Mentor</AccentPosition> */
+}

@@ -8,6 +8,8 @@
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules/@tinymomentum/liquid-glass-react/dist"
-    ]
+    ],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   }
 }

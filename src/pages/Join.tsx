@@ -20,7 +20,7 @@ import {
 import { CardGrid } from "../components/Common/Stylization";
 import { CardG, LargeCard } from "../components/genericComponents/Card";
 import { MApplyBtn } from "../components/genericComponents/Buttons";
-
+import logo from "../assets/img/logo.png";
 import styled from "styled-components";
 const CardJoin = styled(LargeCard)`
   display: flex;
@@ -108,7 +108,7 @@ function Join() {
               </JoinBtn>
             </a>
           </LeftContent>
-          <RightImage src="../src/assets/img/logo.png" alt="UXID_logo" />
+          <RightImage src={logo} alt="UXID_logo" />
         </JoinSection>
 
         <DownArrow />

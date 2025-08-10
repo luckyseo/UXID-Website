@@ -16,6 +16,7 @@ import { CardG } from "../components/genericComponents/Card";
 import { CardDescription } from "../components/genericComponents/Description";
 import Question from "../components/Question";
 import Tree from "../components/Tree";
+import TreeWithDots from "../components/TreeWithDots";
 function Student() {
   
   const myEvents = [
@@ -119,6 +120,14 @@ function Student() {
       <SectionGap />
       <SectionGap />
       <SectionGap />
+       <SectionWrapper style={{ gap: "5px" }}>
+        <TitleContainer>
+          <Title style={{ marginBottom: "25px" }}>APPLICATION PROCESS</Title>
+          <Description>We understand that applications can be daunting, which is why we tried to make this process as simple as possible</Description>
+        </TitleContainer>
+      <TreeWithDots  itemSpacing={250} />
+     
+      </SectionWrapper>
        <SectionWrapper style={{ gap: "5px" }}>
         
         <Question></Question>

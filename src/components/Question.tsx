@@ -50,7 +50,7 @@ const Question = () => {
         color: 'white',
       }}
     >
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'flex-start' }}>
         <div style={{ fontSize: 48, fontWeight: 700, lineHeight: 1.1, marginBottom: 16 }}>
           Questions?<br />We got you.
         </div>

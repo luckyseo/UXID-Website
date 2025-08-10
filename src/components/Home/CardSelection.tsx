@@ -44,12 +44,12 @@ const CardSelection: React.FC = () => {
 			style={{
 				display: "flex",
 				flexDirection: "column",
-				justifyContent: "center",
-				alignItems: "center",
+				justifyContent: "space-between",
+				alignItems: "stretch",      
 				marginTop: 32,
 			}}
 		>
-			<div style={{ display: "flex", flexDirection: "row", gap: 24 }}>
+			<div style={{ display: "flex", flexDirection: "row", gap: 20, justifyContent: "space-between"}}>
 				{buttonsInfo.map((btn, idx) =>
 					selected === idx ? (
 						<div
@@ -57,12 +57,11 @@ const CardSelection: React.FC = () => {
 							style={{
 								display: "flex",
 								flexDirection: "row",
-								alignItems: "stretch",
 								background: "rgba(255,255,255,0.10)",
 								borderRadius: "32px",
 								padding: "0 32px 0 0",
 								boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
-								position: "relative",
+					
 							}}
 						>
 							<div
